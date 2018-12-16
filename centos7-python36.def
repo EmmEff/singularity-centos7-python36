@@ -1,0 +1,12 @@
+BootStrap: library
+From: centos:7
+
+%post
+    yum update -y
+    yum install -y epel-release
+    yum install -y python36
+    yum clean all && yum clean metadata
+    rm -rf /var/cache/yum
+
+%labels
+    Author EmmEff
